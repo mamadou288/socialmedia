@@ -1,0 +1,90 @@
+/* Global settings */
+body {
+    font-family: 'Roboto', sans-serif;  /* Cleaner, modern font */
+    background-color: #1d1e28;  /* Dark background for modern look */
+    margin: 0;
+    padding: 0;
+    color: #f5f5f5;
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+/* Dashboard title styling */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #2b2d42;
+    padding: 20px;
+    margin: 0;
+    font-size: 2.8rem;  /* Larger font for impact */
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 15px 15px;
+    margin-bottom: 20px;
+}
+
+/* Dropdown styling */
+#platform-dropdown {
+    width: 60%;
+    margin: 20px auto;
+    padding: 12px;
+    font-size: 16px;
+    color: #f5f5f5;
+    background-color: #3a3c57;
+    border: 2px solid #8e44ad;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for the dropdown */
+#platform-dropdown:hover {
+    border-color: #9b59b6;
+    background-color: #44476c;  /* Slight change in background color on hover */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Flexbox for the graphs container */
+.graph-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 60px;  /* More padding for spacing */
+    gap: 30px;  /* Increased gap between graphs for cleaner separation */
+}
+
+/* Individual graph box */
+.graph-box {
+    flex: 1 1 45%;  /* Each graph takes 45% of the width */
+    max-width: 550px;  /* Constrain the maximum width */
+    height: 420px;  /* Fix the height */
+    background-color: #2f3147;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;  /* Prevent overflow for better design */
+    position: relative;
+}
+
+/* Hover effect for graph boxes */
+.graph-box:hover {
+    transform: scale(1.03);  /* Subtle zoom on hover */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);  /* More shadow depth */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .graph-container {
+        flex-direction: column;  /* Stack graphs vertically on smaller screens */
+    }
+}
+
+/* Style for plotly titles and text */
+.graph-container h2 {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
